@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Multiple Choice Quiz</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="app">
-        <h1>Multiple Choice Quiz</h1>
+      <h1>Multiple Choice Quiz</h1>
 
-        <!-- Title page -->
-        <div v-if="page == 'welcome_page'" >
-            <h1>Welcome to our Quiz!</h1>
-            <button @click="setPage('quiz_page')">Start Quiz</button>
-        </div>
-        
-        <!-- Quiz page -->
-        <div v-if="page == 'quiz_page'">
-            <h1>Quiz Page</h1>
+      <!-- Title page -->
+      <div v-if="page == 'welcome_page'">
+        <h1>Welcome to our Quiz!</h1>
+        <button @click="setPage('quiz_page')">Start Quiz</button>
+      </div>
 
-        </div>
-        <!-- Score page -->
+      <!-- Quiz page -->
+      <div v-if="page == 'quiz_page'">
+        <h1>Quiz Page</h1>
+        <button @click="setPage('score_page')">Submit Answers</button>
+      </div>
+
+      <!-- Score page -->
+      <div v-if="page == 'score_page'">
+        <h1>Score Page</h1>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
