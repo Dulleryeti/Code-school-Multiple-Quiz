@@ -49,6 +49,28 @@
                 <option>July 4th</option>
             </select>
         </div>
+
+        <div id="question-4">
+            <h3>Question 4</h3>
+            <p>What should be done BEFORE you leave class?</p>
+            <select v-model="questionFour">
+                <option>git init</option>
+                <option>burn laptop</option>
+                <option>push changes to github</option>
+                <option>delete your code</option>
+            </select>
+        </div>
+
+        <div id="question-5">
+            <h3>Question 5</h3>
+            <p>What is Derek's favorite NBA team?</p>
+            <select v-model="questionFive">
+                <option>Warriors</option>
+                <option>Jazz</option>
+                <option>Celtics</option>
+                <option>Bucks</option>
+            </select>
+        </div>
 <br>
         <button @click="checkAnswer(),setPage('score_page')"
         >Submit Answers</button>
@@ -57,6 +79,31 @@
       <!-- Score page -->
       <div v-if="page == 'score_page'">
         <h1>Score Page</h1>
+
+        <div v-if="this.score==5">
+            <h3>Congrats! You got a perfect score! 5/5</h3>
+        </div>
+
+        <div v-if="this.score==4">
+            <h3>So close! 4/5</h3>
+        </div>
+
+        <div v-if="this.score==3">
+            <h3>Better luck next time. 3/5</h3>
+        </div>
+
+        <div v-if="this.score==2">
+            <h3>Ouch, that was rough. 2/5</h3>
+        </div>
+
+        <div v-if="this.score==1">
+            <h3>YOU FAIL! 1/5</h3>
+        </div>
+
+        <div v-if="this.score==0">
+            <h3>YOU FAIL! 0/5</h3>
+        </div>
+
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>

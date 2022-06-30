@@ -65,7 +65,7 @@ var QUIZ = [
         answers: [
             {text: "3", correct: true},
             {text: "682", correct: false},
-            {text: "841", correct: false},
+            {text: "push changes to github", correct: false},
             {text: "1000", correct: false},
         ],
         userAnswer: ""
@@ -76,7 +76,7 @@ var QUIZ = [
         questionText: "How many licks to the center of a tootsie pop?",
         answers: [
             {text: "3", correct: true},
-            {text: "682", correct: false},
+            {text: "Jazz", correct: false},
             {text: "841", correct: false},
             {text: "1000", correct: false},
         ],
@@ -97,6 +97,8 @@ var app = new Vue({
         questionOne: '',
         questionTwo: '',
         questionThree:'',
+        questionFour: '',
+        questionFive: '',
         score: 0
     },
     methods:{
@@ -125,6 +127,16 @@ var app = new Vue({
                 this.score ++;
                 console.log('score', this.score);
             }
+            if (this.questionFour == QUIZ[3].answers[2].text) {
+                console.log('correct');
+                this.score ++;
+                console.log('score', this.score);
+            };
+            if (this.questionFive == QUIZ[3].answers[3].text) {
+                console.log('correct');
+                this.score ++;
+                console.log('score', this.score);
+            };
         },
         
         calculateScore: function () {
