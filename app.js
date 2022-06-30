@@ -34,6 +34,7 @@ var QUIZ = [
 var app = new Vue({
     el: "#app",
     data:{
+        page: 'welcome_page',
         // to attach your global quiz variable to a data variable:
         // myQuiz: QUIZ,
     },
@@ -44,7 +45,9 @@ var app = new Vue({
         // used for showing questions individually
         previousQuestion : function () {},
 
-        setPage: function (page) {},
+        setPage: function (new_page) {
+            this.page = new_page;
+        },
         
         calculateScore: function () {}
     },
