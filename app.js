@@ -120,7 +120,7 @@ var app = new Vue({
                 this.score ++;
                 console.log("score", this.score);
             };
-            if (this.questionThree = QUIZ[0].answers[3].text) {
+            if (this.questionThree == QUIZ[0].answers[3].text) {
                 console.log('correct');
                 this.score ++;
                 console.log('score', this.score);
