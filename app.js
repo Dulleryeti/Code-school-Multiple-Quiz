@@ -41,10 +41,10 @@ var QUIZ = [
         title: "Question 2",
         questionText: "How many licks to the center of a tootsie pop?",
         answers: [
-            {text: "3", correct: true},
-            {text: "682", correct: false},
-            {text: "841", correct: false},
-            {text: "1000", correct: false},
+            {text: "Barrack Obama", correct: true},
+            {text: "Benjamin Franklin", correct: false},
+            {text: "Joe Biden", correct: false},
+            {text: "John Adams", correct: false},
         ],
         userAnswer: ""
     },
@@ -55,7 +55,7 @@ var QUIZ = [
             {text: "3", correct: true},
             {text: "682", correct: false},
             {text: "841", correct: false},
-            {text: "1000", correct: false},
+            {text: "July 4th", correct: false},
         ],
         userAnswer: ""
     },
@@ -110,10 +110,21 @@ var app = new Vue({
             this.page = page;
         },
         checkAnswer: function() {
-            if (this.questionOne == this.Quiz[0].answers[2].text)
+            if (this.questionOne == QUIZ[0].answers[1].text) {
             console.log('correct');
-            score += 1;
-            console.log("score", score);
+            this.score ++;
+            console.log("score", this.score);
+            };
+            if (this.questionTwo == QUIZ[1].answers[3].text){
+                console.log('correct');
+                this.score ++;
+                console.log("score", this.score);
+            };
+            if (this.questionThree = QUIZ[0].answers[3].text) {
+                console.log('correct');
+                this.score ++;
+                console.log('score', this.score);
+            }
         },
         
         calculateScore: function () {
