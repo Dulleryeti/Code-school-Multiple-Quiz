@@ -16,6 +16,40 @@
       <!-- Quiz page -->
       <div v-if="page == 'quiz_page'">
         <h1>Quiz Page</h1>
+
+        <div id="question-one">
+            <h3>Question 1</h3>
+            <p>What is the third letter of the alphabet?</p>
+            <select v-model="questionOne">
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+                <option>A</option>
+            </select>
+        </div>
+
+        <div id="question-two">
+            <h3>Question 2</h3>
+            <p>Who was the 2nd President?</p>
+            <select v-model="questionTwo">
+                <option>Barrack Obama</option>
+                <option>Benjamin Franklin</option>
+                <option>Joe Biden</option>
+                <option>John Adams</option>
+            </select>
+        </div>
+
+        <div id="question-3">
+            <h3>Question 3</h3>
+            <p>When is the Fourth of July?</p>
+            <select v-model="questionThree">
+                <option>October 30th</option>
+                <option>December 25th</option>
+                <option>January 1st</option>
+                <option>July 4th</option>
+            </select>
+        </div>
+<br>
         <button @click="setPage('score_page')">Submit Answers</button>
       </div>
 
